@@ -1,3 +1,3 @@
 class Flaw < ApplicationRecord
-  belongs_to: person
+  # belongs_to :person
 end
