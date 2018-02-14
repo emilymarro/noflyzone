@@ -1,0 +1,24 @@
+<h1>
+  <%= @person.name %>
+  <br/>
+  aka
+  <br/>
+  <%= @person.nickname %>
+</h1>
+
+<%= image_tag @person.photo %>
+
+<h3>Pros: <%= @person.pros %> </h3>
+<h3>Cons: <%= @person.con1 %> </h3>
+<h3>Cons: <%= @person.con2 %> </h3>
+<h3>Cons: <%= @person.con3 %> </h3>
+<h3>Cons: <%= @person.con4 %> </h3>
+<h3>Cons: <%= @person.con5 %> </h3>
+
+<%= link_to 'To sum it up...', flaw_path(@person.flaw_id) %>
+
+<h2> You're not really THAT lonely. Get a cat or something. </h2>
+
+<footer>
+<%= link_to 'See more scumbag exes', people_path %>
+</footer>

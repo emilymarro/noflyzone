@@ -1,0 +1,11 @@
+
+
+<h1> Just a few of the flaws your exes had... </h1>
+
+<ul>
+  <% @flaws.each do |flaw| %>
+    <li>
+      <%= link_to flaw.flaw, flaw_path(person.flaw_id) %>
+    </li>
+  <% end %>
+</ul>

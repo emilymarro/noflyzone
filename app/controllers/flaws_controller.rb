@@ -5,8 +5,8 @@ class FlawsController < ApplicationController
   end
 
   def show
-    @flaws = Flaw.find(params[:id])
-    @person = @flaw.person
+    id = params[:id]
+    @flaw = Flaw.find(id)
   end
 
 end

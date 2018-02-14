@@ -1,0 +1,17 @@
+<h2>
+  All Your Exes... not in Texas. Right here.
+</h2>
+
+<h4>
+  There are <%= @people.count %> crappy ol' exes
+</h4>
+
+<ul>
+  <% @people.each do |person| %>
+    <li>
+      <%= link_to person.name, person_path(person) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Scumbag", new_person_path %>

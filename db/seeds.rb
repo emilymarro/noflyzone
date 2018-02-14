@@ -7,4 +7,4 @@ billy = Person.create!(name: 'Billy', nickname: 'Pretty Pretty Boy', photo: 'htt
 Flaw.create!(flaw: 'Emotionally Unavailable')
 Flaw.create!(flaw: 'Boring')
 Flaw.create!(flaw: 'Jerk')
-Flaw.create!(flaw: 'No Chemisty')
+Flaw.create!(flaw: 'No Chemistry')
