@@ -8,7 +8,8 @@
   <%= f.text_field :con3, placeholder: "Problem number 3" %>
   <%= f.text_field :con4, placeholder: "Problem number 4" %>
   <%= f.text_field :con5, placeholder: "Problem number 5" %>
+  <%= f.collection_select(:flaw_id, Flaw.all, :id, :flaw ) %>
   <%= f.submit "Add 'em to the friggin' list"%>
 <% end %>
 
-<%= f.collection_select(:flaw_id, Flaw.all, :id, :flaw ) %>
+
