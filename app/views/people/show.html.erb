@@ -1,30 +1,56 @@
+<div class = "container">
+<div class = 'header'>
 <h1>
   <%= @person.name %>
-  <br/>
   aka
-  <br/>
   <%= @person.nickname %>
 </h1>
+</div>
 
+<div class='main'>
+<div class = photo>
 <%= image_tag @person.photo %>
+</div>
+<br />
+<br />
+<div class='pros'>
+  <h5>Pros: <%= @person.pros %> </h5>
+</div>
 
-<h3>Pros: <%= @person.pros %> </h3>
-<h3>Cons: <%= @person.con1 %> </h3>
-<h3>Cons: <%= @person.con2 %> </h3>
-<h3>Cons: <%= @person.con3 %> </h3>
-<h3>Cons: <%= @person.con4 %> </h3>
-<h3>Cons: <%= @person.con5 %> </h3>
+<div class='cons'>
+  <h3>Cons: <%= @person.con1 %> </h3>
+  <h3>Cons: <%= @person.con2 %> </h3>
+  <h3>Cons: <%= @person.con3 %> </h3>
+  <h3>Cons: <%= @person.con4 %> </h3>
+  <h3>Cons: <%= @person.con5 %> </h3>
+</div>
 
-<%= link_to 'To sum it up...', flaw_path(@person.flaw_id) %>
 
-<h2> You're not really THAT lonely. Get a cat or something. </h2>
+<br />
+<div class='left'>
+</div>
 
-<footer>
-<%= link_to 'See more scumbag exes', people_path %>
-</footer>
+<div class="right">
+</div>
 
-<%= link_to "Remember something else?", edit_person_path(@person) %>
+<br />
 
-<%= form_for @person, html: {method: "delete"} do |f| %>
-  <%= f.submit "Delete #{@person.name}? Really?" %>
-<% end %>
+  <%= link_to 'To sum it up...', flaw_path(@person.flaw_id) %>
+</div>
+
+<div id='footer'>
+  <h2>
+    You're not really THAT lonely.
+    <a href="https://puppyfinderapp.herokuapp.com/">Get a pet or something.</a>
+  </h2>
+
+    <%= link_to 'See more scumbag exes', people_path %>
+
+    <%= link_to "Remember something else?", edit_person_path(@person) %>
+
+    <%= form_for @person, html: {method: "delete"} do |f| %>
+      <%= f.submit "Delete #{@person.name}? Really?" %>
+    <% end %>
+</div>
+
+</div>
