@@ -1,0 +1,15 @@
+<%= form_for @person do |f| %>
+  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.text_field :nickname, placeholder: "Nickname" %>
+  <%= f.text_field :photo, placeholder: "Link to a very unflattering photo" %>
+  <%= f.text_field :pros, placeholder: "Ok. This is what was good about this person." %>
+  <%= f.text_field :con1, placeholder: "Problem number 1" %>
+  <%= f.text_field :con2, placeholder: "Problem number 2" %>
+  <%= f.text_field :con3, placeholder: "Problem number 3" %>
+  <%= f.text_field :con4, placeholder: "Problem number 4" %>
+  <%= f.text_field :con5, placeholder: "Problem number 5" %>
+  <%= f.collection_select(:flaw_id, Flaw.all, :id, :flaw ) %>
+  <%= f.submit "Submit changes"%>
+<% end %>
+
+

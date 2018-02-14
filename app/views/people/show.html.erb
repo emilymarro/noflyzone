@@ -23,6 +23,8 @@
 <%= link_to 'See more scumbag exes', people_path %>
 </footer>
 
+<%= link_to "Remember something else?", edit_person_path(@person) %>
+
 <%= form_for @person, html: {method: "delete"} do |f| %>
   <%= f.submit "Delete #{@person.name}? Really?" %>
 <% end %>
